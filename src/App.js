@@ -1,5 +1,10 @@
 import './app.css';
-import img1 from './newyork.jpg';
+import img1 from './assets/newyork.jpg';
+import ParisImg from './assets/paris.jpg';
+import CardImage from './components/Card/CardImage';
+import CardContent from './components/Card/CardContent';
+
+import MyBtn from './components/UI/MyBtn';
 
 // const card = (
 //   <article className='card'>
@@ -16,24 +21,19 @@ import img1 from './newyork.jpg';
 //   return n1 + n2;
 // }
 
-function MyBtn(props) {
-  console.log('props ===', props);
-  return <button className='btn-black'>{props.text}</button>;
-}
-
 function App() {
   return (
     <div className='App'>
       <MyBtn text='I am reusable component' />
-      <h1 className='main-title'>Heloo again world</h1>
+      {/* <CardImage img={img1} /> */}
+      <h1 className='main-title'>Back Again</h1>
       <article className='card'>
-        <img className='card-image' src={img1} alt='Card' />
-        <div className='card-content'>
-          <h3>New york</h3>
-          <p className='date'>{new Date().toDateString()}</p>
-          <p className='text'>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-          <MyBtn text='Buy tickets' />
-        </div>
+        <CardImage img={img1} />
+        <CardContent title='New York' date='Tue May 31 2022' text='Welcome to New York, have a great time' />
+      </article>
+      <article className='card'>
+        <CardImage img={ParisImg} />
+        <CardContent title='Paris' date='Tue May 31 2022' text='Welcome to Patis' />
       </article>
     </div>
   );
