@@ -5,6 +5,7 @@ import CardImage from './components/Card/CardImage';
 import CardContent from './components/Card/CardContent';
 
 import MyBtn from './components/UI/MyBtn';
+import Icon from './components/UI/Icon';
 
 // const card = (
 //   <article className='card'>
@@ -35,6 +36,12 @@ function App() {
         <CardImage img={ParisImg} />
         <CardContent title='Paris' date='Tue May 31 2022' text='Welcome to Patis' />
       </article>
+      <Icon icon={'fa-facebook-official'} />
+      <Icon icon={'fa-instagram'} />
+      <Icon icon={'fa-snapchat'} />
+      <Icon icon={'fa-twitter'} />
+      <Icon icon={'fa-pinterest'} />
+      <Icon icon={'fa-linkedin'} />
     </div>
   );
 }
