@@ -15,25 +15,21 @@ const card1Data = {
   date: '2022-05-15',
   text: 'Heloo from new york',
 };
+const card2Data = {
+  title: 'San Francisco',
+  image: SanFranImg,
+  date: '2022-05-15',
+  text: 'Welcome to Paris',
+};
 
-const cardsData = [
-  card1Data,
-  {
-    title: 'Paris',
-    image: ParisImg,
-    date: '2022-05-15',
-    text: 'Welcome to Paris',
-  },
-];
+const card3Data = {
+  title: 'Paris',
+  image: ParisImg,
+  date: '2022-05-15',
+  text: 'Welcome to Paris',
+};
 
-const cards2Data = [
-  {
-    title: 'San Francisco',
-    image: SanFranImg,
-    date: '2022-05-15',
-    text: 'Welcome to Paris',
-  },
-];
+const cardsData = [card1Data, card2Data, card3Data];
 
 // const card = (
 //   <article className='card'>
@@ -59,6 +55,7 @@ function App() {
       <div className='card-container'>
         <Card data={cardsData[0]} />
         <Card data={cardsData[1]} />
+        <Card data={cardsData[2]} />
       </div>
 
       <Icon icon={'fa-facebook-official'} />
