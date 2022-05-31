@@ -1,19 +1,39 @@
 import './app.css';
 import img1 from './assets/newyork.jpg';
 import ParisImg from './assets/paris.jpg';
-import CardImage from './components/Card/CardImage';
-import CardContent from './components/Card/CardContent';
+import SanFranImg from './assets/sanfran.jpg';
+// import CardImage from './components/Card/CardImage';
+// import CardContent from './components/Card/CardContent';
 
 import MyBtn from './components/UI/MyBtn';
 import Icon from './components/UI/Icon';
 import Card from './components/Card/Card';
 
 const card1Data = {
-  title: 'newyork',
+  title: 'New York',
   image: img1,
   date: '2022-05-15',
   text: 'Heloo from new york',
 };
+
+const cardsData = [
+  card1Data,
+  {
+    title: 'Paris',
+    image: ParisImg,
+    date: '2022-05-15',
+    text: 'Welcome to Paris',
+  },
+];
+
+const cards2Data = [
+  {
+    title: 'San Francisco',
+    image: SanFranImg,
+    date: '2022-05-15',
+    text: 'Welcome to Paris',
+  },
+];
 
 // const card = (
 //   <article className='card'>
@@ -37,16 +57,8 @@ function App() {
       {/* <CardImage img={img1} /> */}
       <h1 className='main-title'>Back Again</h1>
       <div className='card-container'>
-        {/* <Card data = {card1Data} /> */}
-        <article className='card'>
-          <CardImage img={img1} />
-          <CardContent title='New York' date='Tue May 31 2022' text='Welcome to New York, have a great time' />
-        </article>
-        <article className='card'>
-          <CardImage img={ParisImg} />
-          <CardContent title='Paris' date='Tue May 31 2022' text='Welcome to Patis' />
-        </article>
-        <Card data={card1Data} />
+        <Card data={cardsData[0]} />
+        <Card data={cardsData[1]} />
       </div>
 
       <Icon icon={'fa-facebook-official'} />
